@@ -1,0 +1,43 @@
+{
+  "variables" : [ {
+    "name" : "NEO4J_HOST_SERVER",
+    "value" : "10.0.0.3",
+    "description" : ""
+  }, {
+    "name" : "NEO4J_USERNAME",
+    "value" : "neo4j",
+    "description" : ""
+  }, {
+    "name" : "NEO4J_PASSWORD",
+    "value" : "your-password",
+    "description" : ""
+  }, {
+    "name" : "NEO4J_DB",
+    "value" : "your-database",
+    "description" : ""
+  }, {
+    "name" : "NEO4J_PORT",
+    "value" : "7687",
+    "description" : ""
+  }, {
+    "name" : "NEO4J_USE_ENCRYPTION",
+    "value" : "false",
+    "description" : ""
+  }, {
+    "name" : "NEO4J_CONNECTION_NAME",
+    "value" : "your-connection-name",
+    "description" : ""
+  }, {
+    "name" : "NEO4J_LOGGING_CONNECTION",
+    "value" : "your-logging-connection-database",
+    "description" : ""
+  }, {
+    "name" : "NEO4J_ROUTING_POLICY",
+    "value" : "",
+    "description" : ""
+  }, {
+    "name" : "NEO4J_BATCH_SIZE",
+    "value" : "5000",
+    "description" : ""
+  } ]
+}

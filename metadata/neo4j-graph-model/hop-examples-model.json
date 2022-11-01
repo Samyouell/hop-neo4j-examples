@@ -1,0 +1,96 @@
+{
+  "relationships": [
+    {
+      "nodeSource": "Author",
+      "name": "WROTE",
+      "description": "",
+      "nodeTarget": "Book",
+      "label": "WROTE",
+      "properties": []
+    }
+  ],
+  "nodes": [
+    {
+      "presentation": {
+        "x": 261,
+        "y": 69
+      },
+      "name": "author",
+      "description": "",
+      "properties": [
+        {
+          "indexed": false,
+          "unique": false,
+          "name": "authorid",
+          "description": "",
+          "type": "Integer",
+          "mandatory": false,
+          "primary": true
+        },
+        {
+          "indexed": false,
+          "unique": false,
+          "name": "name",
+          "description": "",
+          "type": "String",
+          "mandatory": false,
+          "primary": false
+        },
+        {
+          "indexed": false,
+          "unique": false,
+          "name": "born",
+          "description": "",
+          "type": "Integer",
+          "mandatory": false,
+          "primary": false
+        }
+      ],
+      "labels": [
+        "Author"
+      ]
+    },
+    {
+      "presentation": {
+        "x": 428,
+        "y": 131
+      },
+      "name": "book",
+      "description": "",
+      "properties": [
+        {
+          "indexed": false,
+          "unique": false,
+          "name": "bookid",
+          "description": "",
+          "type": "Integer",
+          "mandatory": false,
+          "primary": true
+        },
+        {
+          "indexed": false,
+          "unique": false,
+          "name": "title",
+          "description": "",
+          "type": "String",
+          "mandatory": false,
+          "primary": false
+        },
+        {
+          "indexed": false,
+          "unique": false,
+          "name": "year",
+          "description": "",
+          "type": "Integer",
+          "mandatory": false,
+          "primary": false
+        }
+      ],
+      "labels": [
+        "Book"
+      ]
+    }
+  ],
+  "name": "hop-examples-model",
+  "description": "authors, books, residences.  simple test data set."
+}
