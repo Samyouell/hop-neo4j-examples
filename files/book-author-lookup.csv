@@ -1,0 +1,21 @@
+﻿bookid,personid,publishedby
+1,1,"Little, Brown and Co."
+2,1,"Little, Brown and Co."
+3,2,
+4,3,Knopf
+5,3,Knopf
+6,3,Knopf
+7,4,Penguin Classics
+8,5,Penguin Books
+9,5,Dover Publications
+10,6,Dial Books
+11,7,Harcourt Brace Jovanovich
+12,7,Harcourt Brace Jovanovich
+13,8,Avid Reader Press
+14,9,Harper & Row
+15,9,"Little, Brown and Co."
+16,9,"Little, Brown and Co."
+17,9,"Little, Brown and Co."
+18,10,Fawcett Columbine
+19,10,Knopf
+20,10,Knopf

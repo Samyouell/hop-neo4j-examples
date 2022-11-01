@@ -1,21 +1,21 @@
-﻿bookid,title,year,personid,name,born
-1,Outliers : the story of success,2008,1,Malcolm Gladwell,1963
-2,Talking to strangers : What We Should Know about the People We Don't Know,2019,1,Malcolm Gladwell,1963
-3,Recherches sur les substances radioactives,1903,2,Marie Curie,1867
-4,Pride and Prejudice,1813,3,Jane Austen,1775
-5,Sense and Sensibility,1811,3,Jane Austen,1775
-6,Emma,1815,3,Jane Austen,1775
-7,Wuthering Heights,1847,4,Emily Bronte,1818
-8,Little Women,1868,5,Louisa May Alcott,1832
-9,An Old Fashioned Girl,1870,5,Louisa May Alcott,1832
-10,Rosa Parks: My Story,1992,6,Rosa Parks,1913
-11,The Color Purple,1982,7,Alice Walker,1944
-12,To Hell With Dying,1988,7,Alice Walker,1944
-13,We need to hang out : A memoir of making friends,2021,8,Billy Baker,1980
-14,The death of a President : November 20 - November 25 1963,1967,9,William Manchester,1922
-15,The Last Lion: Winston Spencer Churchill: Visions of Glory 1874–1932,1983,9,William Manchester,1922
-16,The Last Lion: Winston Spencer Churchill: Alone 1932–1940,1988,9,William Manchester,1922
-17,The Last Lion: Winston Spencer Churchill: Defender of the Realm 1940–1965,2012,9,William Manchester,1922
-18,"Rabbit, Run",1960,10,John Updike,1932
-19,Rabbit Redux,1971,10,John Updike,1932
-20,Rabbit at Rest,1990,10,John Updike,1932
+﻿bookid,title,year,personid,name,born,publishedby
+1,Outliers : the story of success,2008,1,Malcolm Gladwell,1963,"Little, Brown and Co."
+2,Talking to strangers : What We Should Know about the People We Don't Know,2019,1,Malcolm Gladwell,1963,"Little, Brown and Co."
+3,Recherches sur les substances radioactives,1903,2,Marie Curie,1867,
+4,Pride and Prejudice,1813,3,Jane Austen,1775,Knopf
+5,Sense and Sensibility,1811,3,Jane Austen,1775,Knopf
+6,Emma,1815,3,Jane Austen,1775,Knopf
+7,Wuthering Heights,1847,4,Emily Bronte,1818,Penguin Classics
+8,Little Women,1868,5,Louisa May Alcott,1832,Penguin Books
+9,An Old Fashioned Girl,1870,5,Louisa May Alcott,1832,Dover Publications
+10,Rosa Parks: My Story,1992,6,Rosa Parks,1913,Dial Books
+11,The Color Purple,1982,7,Alice Walker,1944,Harcourt Brace Jovanovich
+12,To Hell With Dying,1988,7,Alice Walker,1944,Harcourt Brace Jovanovich
+13,We need to hang out : A memoir of making friends,2021,8,Billy Baker,1980,Avid Reader Press
+14,The death of a President : November 20 - November 25 1963,1967,9,William Manchester,1922,Harper & Row
+15,The Last Lion: Winston Spencer Churchill: Visions of Glory 1874–1932,1983,9,William Manchester,1922,"Little, Brown and Co."
+16,The Last Lion: Winston Spencer Churchill: Alone 1932–1940,1988,9,William Manchester,1922,"Little, Brown and Co."
+17,The Last Lion: Winston Spencer Churchill: Defender of the Realm 1940–1965,2012,9,William Manchester,1922,"Little, Brown and Co."
+18,"Rabbit, Run",1960,10,John Updike,1932,Fawcett Columbine
+19,Rabbit Redux,1971,10,John Updike,1932,Knopf
+20,Rabbit at Rest,1990,10,John Updike,1932,Knopf

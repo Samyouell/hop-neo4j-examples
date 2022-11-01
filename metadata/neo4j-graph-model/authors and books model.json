@@ -6,7 +6,17 @@
       "description": "",
       "nodeTarget": "Book",
       "label": "WROTE",
-      "properties": []
+      "properties": [
+        {
+          "indexed": false,
+          "unique": false,
+          "name": "publishedby",
+          "description": "",
+          "type": "String",
+          "mandatory": false,
+          "primary": false
+        }
+      ]
     }
   ],
   "nodes": [
@@ -15,8 +25,8 @@
         "x": 261,
         "y": 69
       },
-      "name": "author",
-      "description": "",
+      "name": "Author",
+      "description": "Obviously, this is a list of Authors",
       "properties": [
         {
           "indexed": false,
@@ -55,8 +65,8 @@
         "x": 428,
         "y": 131
       },
-      "name": "book",
-      "description": "",
+      "name": "Book",
+      "description": "Obviously, a list of books",
       "properties": [
         {
           "indexed": false,
@@ -91,6 +101,6 @@
       ]
     }
   ],
-  "name": "hop-examples-model",
-  "description": "authors, books, residences.  simple test data set."
+  "name": "authors and books model",
+  "description": "authors who wrote books. simple test data set."
 }
