@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <pipeline>
   <info>
-    <name>pipeline-csv%20file%20input%20and%20output</name>
+    <name>pipeline-csv file input and output</name>
     <name_sync_with_filename>Y</name_sync_with_filename>
     <description/>
     <extended_description/>
@@ -23,13 +23,13 @@
   </notepads>
   <order>
     <hop>
-      <from>CSV file input</from>
-      <to>Text file output</to>
+      <from>CSV file input - authors</from>
+      <to>Text file output - test-textfileoutput</to>
       <enabled>Y</enabled>
     </hop>
   </order>
   <transform>
-    <name>CSV file input</name>
+    <name>CSV file input - authors</name>
     <type>CSVInput</type>
     <description/>
     <distribute>Y</distribute>
@@ -94,7 +94,7 @@
     </GUI>
   </transform>
   <transform>
-    <name>Text file output</name>
+    <name>Text file output - test-textfileoutput</name>
     <type>TextFileOutput</type>
     <description/>
     <distribute>Y</distribute>
@@ -174,7 +174,7 @@
     </fields>
     <attributes/>
     <GUI>
-      <xloc>464</xloc>
+      <xloc>480</xloc>
       <yloc>128</yloc>
     </GUI>
   </transform>
