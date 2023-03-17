@@ -90,7 +90,7 @@
     <limit>0</limit>
     <attributes/>
     <GUI>
-      <xloc>192</xloc>
+      <xloc>256</xloc>
       <yloc>48</yloc>
     </GUI>
   </transform>
