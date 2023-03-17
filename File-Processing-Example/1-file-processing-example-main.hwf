@@ -37,6 +37,71 @@
       <attributes_hac/>
     </action>
     <action>
+      <name>get-list-of-files</name>
+      <description/>
+      <type>PIPELINE</type>
+      <attributes/>
+      <filename>${PROJECT_HOME}/File-Processing-Example/get-list-of-files.hpl</filename>
+      <params_from_previous>N</params_from_previous>
+      <exec_per_row>N</exec_per_row>
+      <clear_rows>N</clear_rows>
+      <clear_files>N</clear_files>
+      <set_logfile>N</set_logfile>
+      <logfile/>
+      <logext/>
+      <add_date>N</add_date>
+      <add_time>N</add_time>
+      <loglevel>Basic</loglevel>
+      <set_append_logfile>N</set_append_logfile>
+      <wait_until_finished>Y</wait_until_finished>
+      <create_parent_folder>N</create_parent_folder>
+      <run_configuration>local</run_configuration>
+      <parameters>
+        <pass_all_parameters>Y</pass_all_parameters>
+      </parameters>
+      <parallel>N</parallel>
+      <xloc>544</xloc>
+      <yloc>48</yloc>
+      <attributes_hac/>
+    </action>
+    <action>
+      <name>Check Neo4j Connections</name>
+      <description/>
+      <type>NEO4J_CHECK_CONNECTIONS</type>
+      <attributes/>
+      <connections>
+        <connection>neo</connection>
+      </connections>
+      <parallel>N</parallel>
+      <xloc>176</xloc>
+      <yloc>48</yloc>
+      <attributes_hac/>
+    </action>
+    <action>
+      <name>nuke and pave the db</name>
+      <description/>
+      <type>NEO4J_CYPHER_SCRIPT</type>
+      <attributes/>
+      <connection>neo</connection>
+      <script>match (n) detach delete n
+;</script>
+      <replace_variables>N</replace_variables>
+      <parallel>N</parallel>
+      <xloc>352</xloc>
+      <yloc>48</yloc>
+      <attributes_hac/>
+    </action>
+    <action>
+      <name>Success</name>
+      <description/>
+      <type>SUCCESS</type>
+      <attributes/>
+      <parallel>N</parallel>
+      <xloc>976</xloc>
+      <yloc>48</yloc>
+      <attributes_hac/>
+    </action>
+    <action>
       <name>2-process-single-file.hwf</name>
       <description/>
       <type>WORKFLOW</type>
@@ -64,56 +129,22 @@
       </parameters>
       <set_append_logfile>N</set_append_logfile>
       <parallel>N</parallel>
-      <xloc>512</xloc>
-      <yloc>48</yloc>
-      <attributes_hac/>
-    </action>
-    <action>
-      <name>get-list-of-files</name>
-      <description/>
-      <type>PIPELINE</type>
-      <attributes/>
-      <filename>${PROJECT_HOME}/File-Processing-Example/get-list-of-files.hpl</filename>
-      <params_from_previous>N</params_from_previous>
-      <exec_per_row>N</exec_per_row>
-      <clear_rows>N</clear_rows>
-      <clear_files>N</clear_files>
-      <set_logfile>N</set_logfile>
-      <logfile/>
-      <logext/>
-      <add_date>N</add_date>
-      <add_time>N</add_time>
-      <loglevel>Basic</loglevel>
-      <set_append_logfile>N</set_append_logfile>
-      <wait_until_finished>Y</wait_until_finished>
-      <create_parent_folder>N</create_parent_folder>
-      <run_configuration>local</run_configuration>
-      <parameters>
-        <pass_all_parameters>Y</pass_all_parameters>
-      </parameters>
-      <parallel>N</parallel>
-      <xloc>336</xloc>
-      <yloc>48</yloc>
-      <attributes_hac/>
-    </action>
-    <action>
-      <name>Check Neo4j Connections</name>
-      <description/>
-      <type>NEO4J_CHECK_CONNECTIONS</type>
-      <attributes/>
-      <connections>
-        <connection>neo</connection>
-      </connections>
-      <parallel>N</parallel>
-      <xloc>176</xloc>
+      <xloc>736</xloc>
       <yloc>48</yloc>
       <attributes_hac/>
     </action>
   </actions>
   <hops>
     <hop>
-      <from>get-list-of-files</from>
-      <to>2-process-single-file.hwf</to>
+      <from>Check Neo4j Connections</from>
+      <to>nuke and pave the db</to>
+      <enabled>Y</enabled>
+      <evaluation>Y</evaluation>
+      <unconditional>N</unconditional>
+    </hop>
+    <hop>
+      <from>nuke and pave the db</from>
+      <to>get-list-of-files</to>
       <enabled>Y</enabled>
       <evaluation>Y</evaluation>
       <unconditional>N</unconditional>
@@ -126,14 +157,52 @@
       <unconditional>Y</unconditional>
     </hop>
     <hop>
-      <from>Check Neo4j Connections</from>
-      <to>get-list-of-files</to>
+      <from>get-list-of-files</from>
+      <to>2-process-single-file.hwf</to>
+      <enabled>Y</enabled>
+      <evaluation>Y</evaluation>
+      <unconditional>N</unconditional>
+    </hop>
+    <hop>
+      <from>2-process-single-file.hwf</from>
+      <to>Success</to>
       <enabled>Y</enabled>
       <evaluation>Y</evaluation>
       <unconditional>N</unconditional>
     </hop>
   </hops>
   <notepads>
+    <notepad>
+      <note>This example shows how you can monitor a file directory.
+When files are found, we will get a list of files that are found.
+To start simply, we will loop through the files, one at a time, and 
+import them into Neo4j.
+
+Later, we can enhance the logic to move the files into different
+folders ("in progress", and "completed"), and things like that.
+
+The main workflow contains a parameter called PARAM_FILES_DIR 
+which enables us to softcode the location of directory in which
+we expect to find our incoming files.
+</note>
+      <xloc>64</xloc>
+      <yloc>176</yloc>
+      <width>526</width>
+      <heigth>295</heigth>
+      <fontname>Calibri</fontname>
+      <fontsize>14</fontsize>
+      <fontbold>N</fontbold>
+      <fontitalic>N</fontitalic>
+      <fontcolorred>14</fontcolorred>
+      <fontcolorgreen>58</fontcolorgreen>
+      <fontcolorblue>90</fontcolorblue>
+      <backgroundcolorred>201</backgroundcolorred>
+      <backgroundcolorgreen>232</backgroundcolorgreen>
+      <backgroundcolorblue>251</backgroundcolorblue>
+      <bordercolorred>14</bordercolorred>
+      <bordercolorgreen>58</bordercolorgreen>
+      <bordercolorblue>90</bordercolorblue>
+    </notepad>
   </notepads>
   <attributes/>
 </workflow>

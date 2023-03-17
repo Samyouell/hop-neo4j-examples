@@ -128,6 +128,30 @@
     </hop>
   </hops>
   <notepads>
+    <notepad>
+      <note>Create the 2 types of nodes:
+
+PERSONS
+&amp;
+PASSPORTS</note>
+      <xloc>256</xloc>
+      <yloc>240</yloc>
+      <width>226</width>
+      <heigth>129</heigth>
+      <fontname>Calibri</fontname>
+      <fontsize>14</fontsize>
+      <fontbold>N</fontbold>
+      <fontitalic>N</fontitalic>
+      <fontcolorred>14</fontcolorred>
+      <fontcolorgreen>58</fontcolorgreen>
+      <fontcolorblue>90</fontcolorblue>
+      <backgroundcolorred>201</backgroundcolorred>
+      <backgroundcolorgreen>232</backgroundcolorgreen>
+      <backgroundcolorblue>251</backgroundcolorblue>
+      <bordercolorred>14</bordercolorred>
+      <bordercolorgreen>58</bordercolorgreen>
+      <bordercolorblue>90</bordercolorblue>
+    </notepad>
   </notepads>
   <attributes/>
 </workflow>

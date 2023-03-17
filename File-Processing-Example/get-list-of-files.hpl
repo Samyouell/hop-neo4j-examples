@@ -26,6 +26,33 @@
     <is_key_private>N</is_key_private>
   </info>
   <notepads>
+    <notepad>
+      <note>Get file names
+ - search for "*.csv" files in our directory
+Write to log
+ - print out the file info to log just as a way to verify what is going on
+Select values
+ - instead of returning all attributes of a file, let's pick just the fields we need (filename)
+Copy rows to results
+ - pass the filename value onward to the next process</note>
+      <xloc>224</xloc>
+      <yloc>144</yloc>
+      <width>669</width>
+      <heigth>202</heigth>
+      <fontname>Calibri</fontname>
+      <fontsize>14</fontsize>
+      <fontbold>N</fontbold>
+      <fontitalic>N</fontitalic>
+      <fontcolorred>14</fontcolorred>
+      <fontcolorgreen>58</fontcolorgreen>
+      <fontcolorblue>90</fontcolorblue>
+      <backgroundcolorred>201</backgroundcolorred>
+      <backgroundcolorgreen>232</backgroundcolorgreen>
+      <backgroundcolorblue>251</backgroundcolorblue>
+      <bordercolorred>14</bordercolorred>
+      <bordercolorgreen>58</bordercolorgreen>
+      <bordercolorblue>90</bordercolorblue>
+    </notepad>
   </notepads>
   <order>
     <hop>

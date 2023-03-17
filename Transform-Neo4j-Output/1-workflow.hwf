@@ -161,6 +161,32 @@
     </hop>
   </hops>
   <notepads>
+    <notepad>
+      <note>This is an example of how to use the Neo4j Output transform.
+
+The general idea is to first create the PERSON nodes and PASSPORT nodes.
+After that is complete we can then create the RELATIONSHIS that link
+PERSONs and PASSPORTs.
+
+</note>
+      <xloc>112</xloc>
+      <yloc>240</yloc>
+      <width>578</width>
+      <heigth>175</heigth>
+      <fontname>Calibri</fontname>
+      <fontsize>14</fontsize>
+      <fontbold>N</fontbold>
+      <fontitalic>N</fontitalic>
+      <fontcolorred>14</fontcolorred>
+      <fontcolorgreen>58</fontcolorgreen>
+      <fontcolorblue>90</fontcolorblue>
+      <backgroundcolorred>201</backgroundcolorred>
+      <backgroundcolorgreen>232</backgroundcolorgreen>
+      <backgroundcolorblue>251</backgroundcolorblue>
+      <bordercolorred>14</bordercolorred>
+      <bordercolorgreen>58</bordercolorgreen>
+      <bordercolorblue>90</bordercolorblue>
+    </notepad>
   </notepads>
   <attributes/>
 </workflow>
