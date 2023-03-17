@@ -70,7 +70,8 @@ MERGE ( h:Human {humanId : row.uniqueId} )
 	h.externalId = row.externalId,
 	h.firstName = row.firstName,	
 	h.fullName = row.fullName,
-	h.lastName = row.lastName
+	h.lastName = row.lastName,
+	h.source = row.source
 	</cypher>
     <batch_size>1000</batch_size>
     <read_only>N</read_only>
@@ -112,6 +113,11 @@ MERGE ( h:Human {humanId : row.uniqueId} )
         <parameter>externalId</parameter>
         <field>externalId</field>
         <type>Integer</type>
+      </mapping>
+      <mapping>
+        <parameter>source</parameter>
+        <field>source</field>
+        <type>String</type>
       </mapping>
     </mappings>
     <returns/>
@@ -186,7 +192,7 @@ MERGE ( h:Human {humanId : row.uniqueId} )
         <currency>$</currency>
         <decimal>.</decimal>
         <group>,</group>
-        <length>21</length>
+        <length>19</length>
         <precision>-1</precision>
         <trim_type>none</trim_type>
       </field>
@@ -210,6 +216,17 @@ MERGE ( h:Human {humanId : row.uniqueId} )
         <group>,</group>
         <length>15</length>
         <precision>0</precision>
+        <trim_type>none</trim_type>
+      </field>
+      <field>
+        <name>source</name>
+        <type>String</type>
+        <format/>
+        <currency>$</currency>
+        <decimal>.</decimal>
+        <group>,</group>
+        <length>7</length>
+        <precision>-1</precision>
         <trim_type>none</trim_type>
       </field>
     </fields>
